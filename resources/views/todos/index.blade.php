@@ -10,7 +10,8 @@
 
         @foreach($todos as $todo)
             <div class="well">
-            <h4>{{$todo->text}} <span class="label label-primary">{{$todo->due}}</span></h4>
+            <h4><a href="todo/{{$todo->id}}">{{$todo->text}}</a></h4>
+            <span class="label label-info">{{$todo->due}}</span>
             </div>
         @endforeach
     @endif

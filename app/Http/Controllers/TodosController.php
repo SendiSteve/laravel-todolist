@@ -16,7 +16,8 @@ class TodosController extends Controller
     public function index()
     {
         // Retrive all the todos from the database
-        $todos = Todo::all();
+        // $todos = Todo::all();
+        $todos = Todo::orderBy('created_at', 'desc')->get();
 
         // create a view
         return view('todos.index')->with(compact('todos'));
@@ -52,7 +53,8 @@ class TodosController extends Controller
      */
     public function show($id)
     {
-        //
+        $todo = Todo::find($id);
+        return view('todos.show')->with(compact('todo'));
     }
 
     /**
