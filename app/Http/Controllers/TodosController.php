@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -18,7 +19,8 @@ class TodosController extends Controller
         $todos = Todo::all();
 
         // create a view
-        return view('todos.index')->with('todos', '$todos');
+        return view('todos.index')->with(compact('todos'));
+
     }
 
     /**
