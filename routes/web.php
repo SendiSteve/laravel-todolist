@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Make the home page also point to the index
+Route::get('/', 'TodosController@index');
+
+// This route takes care of the CRUD operations in the TodosController
+Route::resource('todo', 'TodosController');
+
