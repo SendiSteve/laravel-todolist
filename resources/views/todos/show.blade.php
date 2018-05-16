@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <a class="btn btn-danger" href="/">Go Back</a> 
+    <a class="btn btn-danger btn-sm" href="/">Go Back</a> 
 
     <h4>{{$todo->text}}</h4>
 

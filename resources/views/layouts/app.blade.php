@@ -7,10 +7,13 @@
     <title>Todo-list</title>
 
     {{-- custom css --}}
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
+    @include('includes.navbar')
+
     <div class="container">
+        @include('includes.messages')
         @yield('content')
     </div>
 
